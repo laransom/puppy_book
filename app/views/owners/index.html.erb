@@ -1,1 +1,10 @@
 <h1>PuppyBook</h1>
+
+<h2>Owners</h2>
+<ul>
+  <% @owners.each do |owner| %>
+    <li><%= owner.full_name %></li>
+  <% end %>
+</ul>
+
+
