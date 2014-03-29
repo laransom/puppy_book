@@ -5,7 +5,6 @@ class CreateOwner < ActiveRecord::Migration
       t.string :last_name, null: false
       t.string :email, null: false
       t.string :dog_name, null: false
-      t.string :dog_breed
 
       t.timestamps
     end

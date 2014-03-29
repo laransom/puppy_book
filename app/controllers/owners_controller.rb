@@ -17,6 +17,10 @@ class OwnersController < ApplicationController
     @owners = Owner.all
   end
 
+  def show
+    @owner = Owner.find(params[:id])
+  end
+
   def owner_params
     params.require(:owner).permit(:first_name, :last_name, :email, :dog_name, :dog_breed)
   end

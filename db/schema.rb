@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20140328193222) do
     t.string   "last_name",  null: false
     t.string   "email",      null: false
     t.string   "dog_name",   null: false
-    t.string   "dog_breed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
