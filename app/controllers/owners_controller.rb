@@ -8,6 +8,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
+      @dog = Dog.create!(dog_name: @owner.dog, owner_id: @owner.id)
       redirect_to '/owners', notice: 'Dog was successfully registered'
     else
       render 'new'

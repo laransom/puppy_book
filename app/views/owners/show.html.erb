@@ -1,8 +1,21 @@
 <h1><%= @owner.full_name %></h1>
 
+<p><%= @owner.email %></p>
+
+<h2>Registered Dogs</h2>
+<h4>(Click on Dog to Edit)</h4>
 <ul>
-  <li><%= @owner.email %></li>
-  <li><%= @owner.dog.dog_name %></li>
+  <% @owner.dogs.each do |dog| %>
+    <% if dog.breed != nil %>
+      <li><%= link_to "#{dog.dog_name}", "/dogs/#{dog.id}/edit"%><br>
+        Breed: <%= dog.breed %></li>
+    <% else %>
+      <li><%= link_to "#{dog.dog_name}", "/dogs/#{dog.id}/edit" %></li>
+    <% end %>
+  <% end %>
 </ul>
 
+
+
+<%= link_to "Add Dog", '/dogs/new' %><br>
 <%= link_to "Back to Owners", owners_path %>

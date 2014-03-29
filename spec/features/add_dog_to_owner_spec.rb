@@ -9,7 +9,6 @@ feature 'owner registers new dog', %q{
 # Acceptance Criteria:
 # * An owner must specify the dog name and optionally the breed
 # * Upon adding my new dog, I can see a list of all my registered dogs.
-# * I can edit existing dogs to specify breed
 
   scenario 'succesfully fills out new dog form' do
     Owner.create!(first_name: 'Sterling', last_name: 'Archer', email: 'valid@email.com', dog: 'Babou')

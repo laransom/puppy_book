@@ -1,0 +1,10 @@
+<h1>Edit Dog</h1>
+
+<%= simple_form_for(@dog) do |f| %>
+  <%= f.input :dog_name, label: 'Dog Name' %>
+  <%= f.input :breed %>
+  <%= f.input :owner_id, label: 'Owner', collection: @owners %>
+
+
+  <%= f.button :submit, 'Edit Dog' %>
+<% end %>

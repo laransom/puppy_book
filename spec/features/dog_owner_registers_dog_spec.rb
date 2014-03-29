@@ -21,7 +21,12 @@ feature 'owner registers dog', %q{
     click_on 'Register Dog'
 
     expect(page).to have_content 'Dog was successfully registered'
-    expect(page).to have_content('Sterling')
+    expect(page).to have_content 'Sterling'
+
+    click_on 'Sterling Archer'
+
+    expect(page).to have_content 'Babou'
+
   end
 
   scenario 'fills registration form with invalid attributes' do
@@ -30,6 +35,7 @@ feature 'owner registers dog', %q{
     click_on 'Register Dog'
     expect(page).to have_content("can't be blank")
   end
+
 
 
 end

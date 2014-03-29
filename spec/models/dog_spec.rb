@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Dog do
   it { should validate_presence_of :dog_name }
+  it { should validate_presence_of :owner_id }
 
   describe 'associations' do
     it 'should have an owner' do
