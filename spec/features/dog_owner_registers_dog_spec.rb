@@ -18,7 +18,6 @@ feature 'owner registers dog', %q{
     fill_in 'Last Name', with: 'Archer'
     fill_in 'Email', with: 'valid@email.com'
     fill_in 'Dog Name', with: 'Babou'
-    fill_in 'Dog Breed', with: 'Ocelot'
     click_on 'Register Dog'
 
     expect(page).to have_content 'Dog was successfully registered'

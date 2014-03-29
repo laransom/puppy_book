@@ -2,6 +2,7 @@ class OwnersController < ApplicationController
 
   def new
     @owner = Owner.new
+    @dog = Dog.new
   end
 
   def create
@@ -22,7 +23,7 @@ class OwnersController < ApplicationController
   end
 
   def owner_params
-    params.require(:owner).permit(:first_name, :last_name, :email, :dog_name, :dog_breed)
+    params.require(:owner).permit(:first_name, :last_name, :email, :dog)
   end
 
 end
